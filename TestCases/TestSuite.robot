@@ -64,12 +64,17 @@ User submits form
     Sophia      Hello Sophia!
     Charlie     Hello Charlie!
     Emily       Hello Emily!
+    M           Hello M!
     ${EMPTY}    Hello !
+    MaNt4S      Hello MaNt4S!
+    Ma ntas     Hello Ma ntas!
+    日本日本      Hello 日本日本!
     3113        Hello 3113!
     123aaaaaaaaaaaaaaaaaaaa2222222222222222222222222222222222222222  Hello 123aaaaaaaaaaaaaaaaaaaa2222222222222222222222222222222222222222!
-    aa!@$%<>    Hello aa!@$%<>!
+    aa!@$%$<>    Hello aa!@$%<>!
     aa{}[]      Hello aa{}[]!
     aa(*+-/     Hello aa(*+-/!
+    ${XML}      Hello ${XML}!
 
 User gets error on error page
     Given Error page is open

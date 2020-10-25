@@ -10,8 +10,8 @@ ${FORM_SUBMIT_URL}  http://uitest.duodecadits.com/hello.html?myName=
 
 *** Keywords ***
 Form page is open
-    ${RESULT}=   Page Should Contain Element      ${FORM_PAGE_HEAD}
-    Run Keyword Unless  '${RESULT}'=='PASS'     Click on Form button
+    ${RESULT}=   Run Keyword And Ignore Error   Page Should Contain Element      ${FORM_PAGE_HEAD}
+    Run Keyword If  '${RESULT[0]}'=='PASS'     Click on Form button
     Go To   ${FORM_URL}
     Element Text Should Be      ${FORM_PAGE_HEAD}       ${FORM_HEAD_TEXT}
 

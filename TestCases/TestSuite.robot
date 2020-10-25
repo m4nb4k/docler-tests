@@ -6,7 +6,7 @@ Resource    ../Pages/ErrorPage.robot
 Resource    ../Resources/Commons.robot
 Resource    TestData.robot
 
-Suite Setup      Open Browser  ${HOME_URL}      headlessChrome
+Suite Setup      Open Browser  ${HOME_URL}      Chrome
 Suite Teardown   Close Browser
 
 *** Test Cases ***

@@ -9,7 +9,7 @@ log.html
 output.html
 report.html
 output.xml
-.png
+*.png
 
 # Distribution / packaging
 .Python

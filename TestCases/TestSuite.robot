@@ -71,7 +71,7 @@ User submits form
     日本日本      Hello 日本日本!
     3113        Hello 3113!
     123aaaaaaaaaaaaaaaaaaaa2222222222222222222222222222222222222222  Hello 123aaaaaaaaaaaaaaaaaaaa2222222222222222222222222222222222222222!
-    aa!@$%$<>    Hello aa!@$%<>!
+    aa!@$%$<>   Hello aa!@$%<>!
     aa{}[]      Hello aa{}[]!
     aa(*+-/     Hello aa(*+-/!
     ${XML}      Hello ${XML}!

@@ -29,14 +29,12 @@ Given Form page is open When ${USER} submits form Then ${MESSAGE} is shown
     Go To   ${FORM_URL}
     Enter text              ${INPUT_BOX}        ${USER}
     Click on element        ${SUBMIT_BUTTON}
-    Location Should Be      ${FORM_SUBMIT_URL}${USER}
     Element Text Should Be  ${FORM_PAGE_HEAD}   ${MESSAGE}
 
 User submits form
     [Arguments]             ${VALUE}
     Enter text              ${INPUT_BOX}        ${VALUE}
     Click on element        ${SUBMIT_BUTTON}
-    Location Should Be      ${FORM_SUBMIT_URL}${VALUE}
 
 User is shown message
     [Arguments]             ${RESULT}

@@ -8,10 +8,12 @@ __pycache__/
 log.html
 output.html
 report.html
+output.xml
 
 # Distribution / packaging
 .Python
 build/
+.idea/
 develop-eggs/
 dist/
 downloads/

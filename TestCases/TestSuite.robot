@@ -7,7 +7,7 @@ Resource    ../Resources/Commons.robot
 Resource    TestData.robot
 
 Suite Setup      Open Browser  ${HOME_URL}      Chrome
-#Suite Teardown   Close Browser
+Suite Teardown   Close Browser
 
 *** Test Cases ***
 Setup
@@ -30,10 +30,11 @@ Company logo is shown on form page
     Given Form page is open
     Then Company logo is shown
 
-Button statuses are correct
+Home page button status is correct
     Given Home page is open
     Then Home button has active class
 
+Form page button status is correct
     Given Form page is open
     Then Form button has active class
 
@@ -49,9 +50,12 @@ Home page paragraph text is visible
     Given Home page is open
     Then Paragraph text is shown
 
-Form page has one input box and one submit button
+Form page has one input box
     Given Form page is open
     Then There is one input box
+
+Form page has one submit button
+    Given Form page is open
     And There is one submit button
 
 User submits form
@@ -60,6 +64,12 @@ User submits form
     Sophia      Hello Sophia!
     Charlie     Hello Charlie!
     Emily       Hello Emily!
+    ${EMPTY}    Hello !
+    3113        Hello 3113!
+    123aaaaaaaaaaaaaaaaaaaa2222222222222222222222222222222222222222  Hello 123aaaaaaaaaaaaaaaaaaaa2222222222222222222222222222222222222222!
+    aa!@$%<>    Hello aa!@$%<>!
+    aa{}[]      Hello aa{}[]!
+    aa(*+-/     Hello aa(*+-/!
 
 User gets error on error page
     Given Error page is open

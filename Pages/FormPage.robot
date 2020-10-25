@@ -10,10 +10,9 @@ ${FORM_SUBMIT_URL}  http://uitest.duodecadits.com/hello.html?myName=
 
 *** Keywords ***
 Form page is open
-    ${RESULT}=   Run Keyword And Ignore Error   Page Should Contain Element      ${FORM_PAGE_HEAD}
-    Run Keyword If  '${RESULT[0]}'=='PASS'     Click on Form button
-    Go To   ${FORM_URL}
-    Element Text Should Be      ${FORM_PAGE_HEAD}       ${FORM_HEAD_TEXT}
+    ${RESULT}=   Run Keyword And Ignore Error   Page Should Contain Element      ${SUBMIT_BUTTON}
+    Run Keyword If  '${RESULT[0]}'=='PASS'      Element Text Should Be      ${FORM_PAGE_HEAD}       ${FORM_HEAD_TEXT}
+    ...     ELSE        Go To   ${FORM_URL}
 
 Form button has active class
     Element has active class in parent   form

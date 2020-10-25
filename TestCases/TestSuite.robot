@@ -7,24 +7,26 @@ Resource    ../Resources/Commons.robot
 Resource    TestData.robot
 
 Suite Setup      Open Browser  ${HOME_URL}      Chrome
-Suite Teardown   Close Browser
+#Suite Teardown   Close Browser
 
 *** Test Cases ***
 Setup
     Set Selenium Speed              0.02 seconds
     Maximize Browser Window
 
-Titles of sites are correct
+Title of home page is correct
     Given Home page is open
     Then Title should be correct
 
+Title of form page is correct
     Given Form page is open
     Then Title should be correct
 
-Company logo is shown on every site
+Company logo is shown on home page
     Given Home page is open
     Then Company logo is shown
 
+Company logo is shown on form page
     Given Form page is open
     Then Company logo is shown
 

@@ -9,10 +9,9 @@ ${PARAGRAPH_TEXT_ELEMENT}       xpath: //p
 
 *** Keywords ***
 Home page is open
-    ${RESULT}=   Run Keyword And Ignore Error   Page Should Contain Element     ${HEADING_TEXT_ELEMENT}
-    Run Keyword If  '${RESULT[0]}'=='PASS'     Click on Home button
-    Go To   ${HOME_URL}
-    Element Text Should Be      ${HEADING_TEXT_ELEMENT}       ${HEADING_TEXT}
+    ${RESULT}=   Run Keyword And Ignore Error   Element Text Should Be      ${PARAGRAPH_TEXT_ELEMENT}   ${PARAGRAPH_TEXT}
+    Run Keyword If  '${RESULT[0]}'=='PASS'      Element Text Should Be      ${HEADING_TEXT_ELEMENT}     ${HEADING_TEXT}
+    ...     ELSE        Go To   ${HOME_URL}
 
 Title should be correct
     Title Should Be     ${TITLE_NAME}
